@@ -1,19 +1,12 @@
 import sqlite3
 
-connection = sqlite3.connect('employee.db')
-c = connection.cursor()
+conn = sqlite3.connect('users.db')
+c = conn.cursor()
 
-# c.execute("""CREATE TABLE employees (
-#         first text,
-#         last text,
-#         pay integer
-#     )""")
+c.execute('''CREATE TABLE users
+             (name text, goal integer, id integer
+        )''')
 
-c.execute('INSERT INTO employees VALUES("Corey","Shaffer",1000)')
-
-
-
-connection.commit()
-
-connection.close()
+conn.commit()
+conn.close()
 
