@@ -104,9 +104,7 @@ def  process_new_word(message):
   try :
     chat_id = message.chat.id
     word = message.text
-    row = c.execute(f"SELECT * FROM users WHERE id={chat_id}")
-    data = row.fetchone()
-    user = User(data[0],chat_id)
+    user = User('user',chat_id)
     users_dict[chat_id] = user 
     user.pair.append(word) 
     msg = bot.reply_to(message, 'What is the translation?')
