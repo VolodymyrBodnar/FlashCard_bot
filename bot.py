@@ -30,8 +30,8 @@ class User:
       revers = (self.pair[1],self.pair[0])
       with sqlite3.connect("users.db") as con:
           cur = con.cursor()
-          cur.execute(f"INSERT INTO words{self._id} VALUES (?, ?)",streight)
-          cur.execute(f"INSERT INTO words{self._id} VALUES (?, ?)",revers)
+          cur.execute(f"INSERT INTO words{str(self._id)} VALUES (?, ?)",streight)
+          cur.execute(f"INSERT INTO words{str(self._id)} VALUES (?, ?)",revers)
           con.commit()
 
 class Player:
