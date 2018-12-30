@@ -163,8 +163,6 @@ def check(message):
       player.i += 1
       player.ask()
     
-  
-
 
 @bot.message_handler(commands=['data'])
 def user_data(message):
