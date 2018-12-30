@@ -1,2 +1,2 @@
-bot: python3 db.py
-bot: python3 bot.py 
+python3 db.py
+python3 bot.py 
