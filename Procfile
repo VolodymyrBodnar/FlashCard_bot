@@ -1,2 +1,1 @@
-python3 db.py
-python3 bot.py 
+web: python3 bot.py 
